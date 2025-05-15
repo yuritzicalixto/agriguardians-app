@@ -20,6 +20,7 @@ class FrontEndController extends Controller
 
 
     function login(){
-        return redirect()->route('login');
+        // return redirect()->route('sitio.pages.login');
+        return view('sitio.pages.login');
     }
 }

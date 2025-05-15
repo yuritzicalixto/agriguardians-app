@@ -18,7 +18,7 @@
 
             </form>
 
-            <button class="secondary-button signup-button"> <a href="./registro.html">Sign Up</a></button>
+            <button class="secondary-button signup-button"> <a href="{{ route('sitio.registro') }}">Sign Up</a></button>
         </div>
     </div>
 
