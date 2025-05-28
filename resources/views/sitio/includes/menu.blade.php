@@ -11,8 +11,8 @@
         <ul>
           <li><a href="{{ route('sitio.index')}}">AgriGuardians</a></li>
           <li><a href="{{ route('sitio.preguntas') }}">F.A.Q.s</a></li>
-          <li><a href="{{ route('sitio.login') }}">Login</a></li>
-          <li><a href="{{ route('sitio.registro') }}">Registro</a></li>
+          <li><a href="{{ route('login') }}">Login</a></li>
+          <li><a href="{{ route('register') }}">Registro</a></li>
         </ul>
       </div>
     </nav>

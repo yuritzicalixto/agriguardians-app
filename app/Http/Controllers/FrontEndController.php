@@ -14,13 +14,13 @@ class FrontEndController extends Controller
         return view('sitio.pages.preguntas');
     }
 
-    function registro(){
-        return view('sitio.pages.registro');
+    function register(){
+        return view('register');
     }
 
 
     function login(){
-        // return redirect()->route('sitio.pages.login');
-        return view('sitio.pages.login');
+        return redirect()->route('login');
+        // return view('sitio.pages.login');
     }
 }
