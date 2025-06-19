@@ -5,6 +5,13 @@
         'name' => 'Dashboard',
         'route' => route ('admin.dashboard'),
         'active' => request()->routeIs('admin.dashboard')
+    ],
+    [
+        //Usuarios
+        'icon' => 'fa-solid fa-box-open',
+        'name' => 'Usuarios',
+        'route' => route ('admin.dashboard'),
+        'active' => request()->routeIs('admin.dashboard')
     ]
 ];
 @endphp
