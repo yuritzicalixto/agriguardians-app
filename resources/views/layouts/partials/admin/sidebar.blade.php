@@ -10,8 +10,8 @@
         //Usuarios
         'icon' => 'fa-solid fa-box-open',
         'name' => 'Usuarios',
-        'route' => route ('admin.dashboard'),
-        'active' => request()->routeIs('admin.dashboard')
+        'route' => route ('admin.usuarios-unity'),
+        'active' => request()->routeIs('admin.usuarios-unity')
     ]
 ];
 @endphp

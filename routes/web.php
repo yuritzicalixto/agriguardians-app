@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UserViewController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -39,6 +40,12 @@ Route::middleware([
         return view('admin.dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/usuarios-unity', [UserViewController::class, 'index'])
+     ->name('admin.usuarios-unity');
+
+
 
 // Route::get('/', function () {
 //     return view('admin.dashboard');
