@@ -19,6 +19,12 @@
         'name' => 'Progreso Unity',
         'route' => route ('admin.progreso-unity'),
         'active' => request()->routeIs('admin.progreso-unity')
+    ],
+    [
+        'icon' => 'fa-solid fa-fire-flame-curved',
+        'name' => 'Usuarios Totales',
+        'route' => route ('admin.users.index'),
+        'active' => request()->routeIs('admin.users.*')
     ]
 
 ];

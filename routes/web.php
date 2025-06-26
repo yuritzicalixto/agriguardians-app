@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\GameProgressViewController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserViewController;
 use Illuminate\Support\Facades\Route;
 
@@ -58,3 +59,5 @@ Route::get('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::
 Route::post('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store']);
 Route::get('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'create'])->name('register');
 Route::post('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'store']);
+
+

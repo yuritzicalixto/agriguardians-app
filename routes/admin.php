@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/admin', function () {
@@ -13,3 +14,6 @@ Route::get('/', function () {
 // Route::get('/', function () {
 //     return view('admin.usuarios-unity');
 // })->name('usuarios-unity');
+
+//Rutas de Usuarios - crud table
+Route::resource('users', UserController::class);
