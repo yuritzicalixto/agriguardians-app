@@ -12,7 +12,15 @@
         'name' => 'Usuarios',
         'route' => route ('admin.usuarios-unity'),
         'active' => request()->routeIs('admin.usuarios-unity')
+    ],
+    [
+        //Progreso de Unity Nivel, Tiempo y id del Usuario
+        'icon' => 'fa-solid fa-fire-flame-curved',
+        'name' => 'Progreso Unity',
+        'route' => route ('admin.progreso-unity'),
+        'active' => request()->routeIs('admin.progreso-unity')
     ]
+
 ];
 @endphp
 

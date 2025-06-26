@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\GameProgressViewController;
 use App\Http\Controllers\Admin\UserViewController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,11 +24,11 @@ Route::group(['prefix' => 'sitio'], function (){
     // Route::get( '/login', [App\Http\Controllers\FrontEndController::class, 'login'])->name('login');
 });
 
-//Rutas de autenticación
-Route::get('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'create'])->name('login');
-Route::post('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store']);
-Route::get('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'create'])->name('register');
-Route::post('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'store']);
+// //Rutas de autenticación
+// Route::get('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'create'])->name('login');
+// Route::post('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store']);
+// Route::get('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'create'])->name('register');
+// Route::post('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'store']);
 
 
 
@@ -45,8 +46,15 @@ Route::middleware([
 Route::get('/usuarios-unity', [UserViewController::class, 'index'])
      ->name('admin.usuarios-unity');
 
-
+Route::get('/progreso-unity', [GameProgressViewController::class, 'index'])
+     ->name('admin.progreso-unity');
 
 // Route::get('/', function () {
 //     return view('admin.dashboard');
 // })->name('dashboard');
+
+//Rutas de autenticación
+Route::get('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'create'])->name('login');
+Route::post('/login', [App\Http\Controllers\Auth\AuthenticatedSessionController::class, 'store']);
+Route::get('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'create'])->name('register');
+Route::post('/register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'store']);

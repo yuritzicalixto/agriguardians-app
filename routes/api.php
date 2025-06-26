@@ -18,3 +18,6 @@ Route::post('/register', [UnityAuthController::class, 'register']);
 Route::get('/test', function () {
     return response()->json(['message' => 'CORS OK']);
 });
+
+
+Route::post('/progreso', [App\Http\Controllers\Api\GameProgressController::class, 'store']);

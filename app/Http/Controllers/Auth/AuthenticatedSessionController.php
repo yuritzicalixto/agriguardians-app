@@ -19,5 +19,10 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/dashboard'); // Redirige a la ruta deseada
         }
+
+        // Si falla el login
+    return back()->withErrors([
+        'email' => 'Las credenciales no coinciden con nuestros registros.',
+    ])->withInput();
     }
 }
