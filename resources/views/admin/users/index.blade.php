@@ -10,7 +10,7 @@
 
 {{-- Start Plantilla tabla --}}
 
-
+    @livewire('user-table')
 {{-- End Plantilla tabla --}}
 
 </x-admin-layout>
