@@ -31,7 +31,21 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // verificar que todos los usuarios esten llegando
+        //return $request->all();
+        //Reglas de validación
+        //Estos valores validados se recuperan en un array
+        $data= $request->validate([
+            'name'=> 'required',
+            'email'=> 'required|email|unique:users',
+            'password'=> 'required|min:6|confirmed',
+        ]);
+
+        //Se crea el usuario
+        User::create($data);
+        // Una vez creado el usuario
+        //Nos redirecciona a esta vista
+        return redirect()->route('admin.users.index');
     }
 
     /**
