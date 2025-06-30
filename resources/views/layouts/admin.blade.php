@@ -73,6 +73,21 @@
     {{-- END PLANTILLA --}}
 
     @livewireScripts
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Livewire.on('swal', data=> {
+            Swal.fire(data[0]);
+        });
+    </script>
+    @if (session('swal'))
+       {{-- <script>
+        Swal.fire({!! json_decode(session('swal')) !!});
+       </script> --}}
+        <script>
+            Swal.fire(@json(session('swal')));
+        </script>
+    @endif
 </body>
 
 </html>
