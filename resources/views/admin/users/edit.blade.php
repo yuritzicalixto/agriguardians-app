@@ -51,13 +51,49 @@
             </div>
 
             {{--Enviar datos del formulario--}}
-            <div class="flex justify-end">
+            <div class="flex justify-end space-x-2">
+                <x-danger-button onclick="confirmDelete()">
+                    Eliminar
+                </x-danger-button>
+
                 <x-button>
                     Actualizar
                 </x-button>
             </div>
         </form>
     </div>
+
+    {{-- Otro formulario --}}
+    <form action="{{ route('admin.users.destroy', $user) }}"  method="POST" id="deleteForm">
+        @csrf
+        @method('DELETE')
+    </form>
+    {{-- Otro formulario --}}
+
+    @push('js')
+        <script>
+            function confirmDelete()
+            {
+                // START Mensaje de alerta
+                Swal.fire({
+                    title: "¿Estás seguro?",
+                    text: "¡No podrás revertir esto!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "¡Si, borralo!",
+                    cancelButtonText: "Cancelar"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        //Eliminar Usuario
+                        document.getElementById('deleteForm').submit();
+                    }
+                });
+                // END Mensaje de alerta
+            }
+        </script>
+    @endpush
 
 {{-- End Plantilla tabla --}}
 

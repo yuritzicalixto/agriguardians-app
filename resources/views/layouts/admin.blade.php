@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+    @stack('css')
+
     {{-- START ICONS FONT AWESOME  --}}
     <script src="https://kit.fontawesome.com/12be9b1210.js" crossorigin="anonymous"></script>
     {{-- END ICONS --}}
@@ -88,6 +90,8 @@
             Swal.fire(@json(session('swal')));
         </script>
     @endif
+
+    @stack('js')
 </body>
 
 </html>
