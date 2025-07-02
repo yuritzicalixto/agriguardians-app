@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
@@ -23,7 +24,8 @@ class RoleController extends Controller
     public function create()
     {
         //
-        return view('admin.roles.create');
+        $permissions = Permission::all();
+        return view('admin.roles.create', compact('permissions'));
     }
 
     /**
@@ -32,12 +34,32 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         //
+        //Reglas de validación
+        //Estos valores validados se recuperan en un array
+        $data= $request->validate([
+            'name'=> 'required|unique:roles',
+            'permissions' => 'nullable|array',
+        ]);
+
+        $role = Role::create($data);
+
+        if(isset($data['permissions'])){
+            $role->permissions()->sync($data['permissions']);
+        }
+
+        session()->flash('swal', [
+            'icon'=> 'success',
+            'title' => '¡Rol creado!',
+            'text'=> 'El rol se ha creado correctamente.',
+        ]);
+
+        return redirect()->route('admin.roles.edit', $role);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Role $sole)
+    public function show(Role $role)
     {
         //
         return view('admin.roles.show', compact('role'));
@@ -46,7 +68,7 @@ class RoleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Role $sole)
+    public function edit(Role $role)
     {
         //
         return view('admin.roles.edit', compact('role'));
@@ -63,7 +85,7 @@ class RoleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Role $sole)
+    public function destroy(Role $role)
     {
         //
     }

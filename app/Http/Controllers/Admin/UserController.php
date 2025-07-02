@@ -50,9 +50,7 @@ class UserController extends Controller
 
         if (isset($data['roles'])) {
             $user->roles()->sync($data['roles']);
-        } else{
-            $user->roles()->detach();
-        }
+        } 
         // Una vez creado el usuario
         //Nos redirecciona a esta vista
         return redirect()->route('admin.users.index');
