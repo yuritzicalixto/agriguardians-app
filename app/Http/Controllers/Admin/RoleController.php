@@ -111,5 +111,13 @@ class RoleController extends Controller
     public function destroy(Role $role)
     {
         //
+        $role->delete();
+        session()->flash('swal', [
+            'icon'=> 'success',
+            'title'=> 'Rol eliminado',
+            'text'=> 'El rol se ha eliminado correctamente',
+        ]);
+
+        return redirect()->route('admin.roles.index');
     }
 }
