@@ -25,7 +25,13 @@
         'name' => 'Usuarios Totales',
         'route' => route ('admin.users.index'),
         'active' => request()->routeIs('admin.users.*')
-    ]
+    ],
+    [
+        'icon' => 'fa-solid fa-user-tag',
+        'name' => 'Roles',
+        'route' => route ('admin.roles.index'),
+        'active' => request()->routeIs('admin.roles.*')
+    ],
 
 ];
 @endphp
