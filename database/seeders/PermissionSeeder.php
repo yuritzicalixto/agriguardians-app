@@ -15,10 +15,12 @@ class PermissionSeeder extends Seeder
     {
         //
         $permissions = [
-            'access dashboard',
+            'manage_progreso',
 
-            'manage users',
-            'manage progreso',
+            'access_dashboard',
+            'manage_users',
+            'manage_roles',
+            'manage_permissions',
         ];
 
         foreach ($permissions as $permission) {

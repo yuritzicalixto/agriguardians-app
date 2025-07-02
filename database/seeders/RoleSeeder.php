@@ -24,13 +24,20 @@ class RoleSeeder extends Seeder
 
         // Si creaste permisos antes y quieres asignarlos:
         $admin->syncPermissions([
-            'access dashboard',
-            'manage users',
-            'manage progreso'
+            // 'access dashboard',
+            // 'manage users',
+            // 'manage progreso'
+
+            'manage_progreso',
+
+            'access_dashboard',
+            'manage_users',
+            'manage_roles',
+            'manage_permissions',
         ]);
 
         $userRole->syncPermissions([
-            'access dashboard'
+            'access_dashboard'
         ]);
 
         // Asignar el rol admin al primer usuario (puedes cambiar el ID según tu caso)
