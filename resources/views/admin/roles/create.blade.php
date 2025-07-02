@@ -20,7 +20,7 @@
                 <x-label class="mb-1">
                     Nombre
                 </x-label>
-                <x-input name="name" class="w-full"/>
+                <x-input name="name" value="{{ old('name') }}" class="w-full"/>
             </div>
             {{--Permisos de los Roles--}}
             <div class="mb-4">

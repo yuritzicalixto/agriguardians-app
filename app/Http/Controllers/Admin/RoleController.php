@@ -71,15 +71,38 @@ class RoleController extends Controller
     public function edit(Role $role)
     {
         //
-        return view('admin.roles.edit', compact('role'));
+        $permissions = Permission::all();
+        return view('admin.roles.edit', compact('role', 'permissions'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Role $sole)
+    public function update(Request $request, Role $role)
     {
         //
+        //Reglas de validación
+        //Estos valores validados se recuperan en un array
+        $data= $request->validate([
+            'name'=> 'required|unique:roles,name,' . $role->id,
+            'permissions' => 'nullable|array',
+        ]);
+
+        $role->update($data);
+
+        if(isset($data['permissions'])){
+            $role->permissions()->sync($data['permissions']);
+        } else {
+            $role->permissions()->detach();
+        }
+
+        session()->flash('swal', [
+            'icon'=> 'success',
+            'title' => '¡Rol creado!',
+            'text'=> 'El rol se ha actualizado correctamente.',
+        ]);
+
+        return redirect()->route('admin.roles.edit', $role);
     }
 
     /**
