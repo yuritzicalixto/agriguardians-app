@@ -45,9 +45,11 @@ Route::middleware([
 
 
 Route::get('/usuarios-unity', [UserViewController::class, 'index'])
+     ->middleware('can:manage_users')
      ->name('admin.usuarios-unity');
 
 Route::get('/progreso-unity', [GameProgressViewController::class, 'index'])
+     ->middleware('can:manage_progreso')
      ->name('admin.progreso-unity');
 
 // Route::get('/', function () {
