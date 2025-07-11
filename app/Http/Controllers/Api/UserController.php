@@ -34,6 +34,11 @@ class UserController extends Controller
             return response()->json(['message' => 'Invalid credentials'], 401);
         }
 
-        return response()->json(['message' => 'Login successful'], 200);
+        return response()->json([
+            'message' => 'Login successful',
+            'user_id' => $user->id, // este es el valor que Unity necesita para progreso
+            'name' => $user->name,
+            'email' => $user->email
+        ], 200);
     }
 }
