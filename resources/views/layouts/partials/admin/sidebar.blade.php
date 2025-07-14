@@ -24,7 +24,7 @@
         'can' => ['manage_progreso']
     ],
     [
-        'icon' => 'fa-solid fa-fire-flame-curved',
+        'icon' => 'fa-solid fa-users',
         'name' => 'Usuarios Totales',
         'route' => route ('admin.users.index'),
         'active' => request()->routeIs('admin.users.*'),

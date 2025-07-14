@@ -10,7 +10,7 @@
 
 {{-- Start Plantilla tabla --}}
 
-
+@livewire('progreso-table')
 {{-- End Plantilla tabla --}}
 
 </x-admin-layout>
