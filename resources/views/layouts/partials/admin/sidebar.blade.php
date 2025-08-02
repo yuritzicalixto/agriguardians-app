@@ -24,6 +24,14 @@
         'can' => ['manage_progreso']
     ],
     [
+        //Progreso de Unity Nivel, Tiempo y id del Usuario
+        'icon' => 'fa-solid fa-box-open',
+        'name' => 'Resumen Unity',
+        'route' => route ('admin.resumen'),
+        'active' => request()->routeIs('admin.resumen'),
+        'can' => ['manage_progreso']
+    ],
+    [
         'icon' => 'fa-solid fa-users',
         'name' => 'Usuarios Totales',
         'route' => route ('admin.users.index'),

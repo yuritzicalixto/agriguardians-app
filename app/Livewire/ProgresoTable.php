@@ -22,14 +22,16 @@ class ProgresoTable extends DataTableComponent
             //     ->sortable(),
             Column::make("User id", "user_id")
                 ->sortable(),
-            Column::make("Level", "level")
+            Column::make("Nivel", "level")
                 ->sortable(),
-            Column::make("Time played", "time_played")
+            Column::make("Tiempo Jugado", "time_played")
                 ->sortable(),
             Column::make("Created at", "created_at")
                 ->sortable(),
             Column::make("Updated at", "updated_at")
                 ->sortable(),
+
+
         ];
     }
 }

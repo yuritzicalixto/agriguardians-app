@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\GameSummaryController;
 use App\Http\Controllers\UnityAuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,5 @@ Route::get('/test', function () {
 
 
 Route::post('/progreso', [App\Http\Controllers\Api\GameProgressController::class, 'store']);
+
+Route::post('/resumen', [GameSummaryController::class, 'store']);

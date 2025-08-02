@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\GameProgressViewController;
+use App\Http\Controllers\Admin\GameSummaryViewController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserViewController;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +52,10 @@ Route::get('/usuarios-unity', [UserViewController::class, 'index'])
 Route::get('/progreso-unity', [GameProgressViewController::class, 'index'])
      ->middleware('can:manage_progreso')
      ->name('admin.progreso-unity');
+
+Route::get('/resumen', [GameSummaryViewController::class, 'index'])
+     ->middleware('can:manage_progreso')
+     ->name('admin.resumen');
 
 // Route::get('/', function () {
 //     return view('admin.dashboard');

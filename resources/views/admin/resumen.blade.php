@@ -4,12 +4,12 @@
         'route' => route('admin.dashboard'),
     ],
     [
-        'name'=>'Progreso'
+        'name'=>'Resumen'
     ]
 ]">
 
 {{-- Start Plantilla tabla --}}
-@livewire('progreso-table')
+@livewire('resumen-table')
 {{-- @livewire('progreso-table') --}}
 {{-- End Plantilla tabla --}}
 
