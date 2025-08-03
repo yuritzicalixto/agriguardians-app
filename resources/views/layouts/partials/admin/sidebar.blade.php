@@ -7,14 +7,14 @@
         'active' => request()->routeIs('admin.dashboard'),
         'can' => ['access_dashboard']
     ],
-    [
-        //Usuarios
-        'icon' => 'fa-solid fa-box-open',
-        'name' => 'Usuarios',
-        'route' => route ('admin.usuarios-unity'),
-        'active' => request()->routeIs('admin.usuarios-unity'),
-        'can' => ['manage_users']
-    ],
+    // [
+    //     //Usuarios
+    //     'icon' => 'fa-solid fa-box-open',
+    //     'name' => 'Usuarios',
+    //     'route' => route ('admin.usuarios-unity'),
+    //     'active' => request()->routeIs('admin.usuarios-unity'),
+    //     'can' => ['manage_users']
+    // ],
     [
         //Progreso de Unity Nivel, Tiempo y id del Usuario
         'icon' => 'fa-solid fa-fire-flame-curved',

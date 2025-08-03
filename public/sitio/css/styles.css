@@ -4,12 +4,13 @@
     --dark: #232830;
     --primary: #081b29;
     --title: #10d0f2;
-    --text: #edf1f1;
+    /*--text: #edf1f1; */
+    --text: #a9afaf;
     --secondary: #008287;
     --block: #00abf0;
-    --sm: 14px;
-    --md: 16px;
-    --lg: 20px;
+    --sm: 16px;
+    --md: 18px;
+    --lg: 24px;
   }
 
   * {
@@ -19,52 +20,42 @@
   }
 
   body {
-    background-color: var(--black);
-    /* font-family: "M PLUS 1 Code", monospace; */
-    margin: 0;
+    background-color: var(--white);
     font-family: 'Quicksand', sans-serif;
   }
 
-  /* ========== NAV MENU ========== */
-  /* .nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 24px;
-    border-bottom: 1px solid var(--block);
-    position: sticky;
-    top: 0;
-  } */
 
   .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 24px;
-    border-bottom: 1px solid var(--block);
+    padding: 5px 24px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--black);
-    z-index: 1000;
+    background-color: var(--white);
+    z-index: 100;
   }
 
   .main-principal {
-    margin-top: 80px;
+    margin-top: 100px;
   }
 
   .container-logo img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
   }
 
-  .menu-toggle {
+  .menu-toggle  {
     display: none;
-    font-size: 30px;
-    color: var(--text);
-    cursor: pointer;
   }
+  /*MENU CLOSE*/
+.close{
+  display: none;
+}
+  /*MENU CLOSE*/
+
 
   .container-navegation ul {
     list-style: none;
@@ -81,7 +72,7 @@
   }
 
   .container-navegation ul li a:hover {
-    border: 1px solid var(--title);
+    /* border: 1px solid var(--title); */
     border-radius: 8px;
     padding: 6px;
     color: var(--title);
@@ -90,16 +81,41 @@
   /* ========== HOME ========== */
   .main-home {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    padding: 40px 5vw;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .home-descript{
+    width: 50%;
+    /* margin: 50px 10px 10px 50px; */
+    flex: 1;
   }
 
-  .home-img img {
-    width: 300px;
-    height: 250px;
+  .home-img{
+    display: flex;
+    width: 50%;
+    margin: 50px 10px 10px 10px;
+    flex: 1;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+   .home-img img {
+    width: 0%;
+    flex-grow: 1;
     object-fit: cover;
+    opacity: .8;
+    transition: .5s, ease;
+  }
+  .home-img img:hover {
+    cursor: crosshair;
+    width: 10%;
+    opacity: 1;
+    filter: contrast(120%);
+
   }
 
   .home-descript h3,
@@ -114,13 +130,14 @@
 
   .home-descript p {
     color: var(--text);
-    font-size: var(--md);
+    font-size: 18px;
     font-family: "Lato", sans-serif;
+    text-align: justify;
   }
 
   .agri h3{
     text-align: center;
-    padding: 30px;
+    padding: 10px;
     color: var(--title);
   }
 
@@ -134,135 +151,283 @@
     object-fit: cover;
   }
 
-  /*============ INFO ============*/
-  .info-section {
-    padding: 40px 20px;
-    background-color: #000000;
-  }
 
-  .info-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-  }
+  /*============ START DEMO ============*/
+  .demo-main {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 20px;
+    }
 
-  .info-content.reverse {
-    flex-direction: row-reverse;
-  }
+    .activities {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
 
-  .info-img {
-    flex: 1;
-    max-width: 500px;
-    padding: 10px;
-  }
+    .activity {
+      text-align: center;
+      width: 80px;
+    }
 
-  .info-img img {
-    width: 100%;
-    border-radius: 10px;
-  }
+    .activity img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 5px;
+    }
 
-  .info-text {
-    flex: 1;
-    padding: 20px;
-  }
+    .explore-card {
+      background-color: #e8f3fd;
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
 
-  .info-text h2 {
-    font-size: 24px;
-    color: #009bca;
-    margin-bottom: 10px;
-  }
+    .explore-text {
+      flex: 1 1 50%;
+    }
 
-  .info-text ul {
-    list-style: disc;
-    padding-left: 20px;
-    color: #333;
-  }
+    .explore-text h2 {
+      margin: 0;
+      font-size: 30px;
+      color: #1e3a8a;
+      text-align: center;
+    }
 
-  .btn-download {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 24px;
-    background-color: #ff0;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-  }
+    .explore-text p {
+      margin: 30px;
+      text-align: justify;
+      font-size: 18px;
+    }
 
-  .btn-download:hover {
-    background-color: #e5e500;
-  }
-  /*============ END INFO ============*/
+    .explore-button {
+      background-color: white;
+      border: 1px solid #1e3a8a;
+      color: #1e3a8a;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      justify-content: center;
+      align-items: center;
+      margin: 0 30px;
+    }
 
+    .explore-button:hover {
+      background-color: #dbeafe;
+    }
+
+    .explore-image {
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .explore-image img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    @media (max-width: 780px) {
+      .explore-card {
+        flex-direction: column;
+        text-align: center;
+        flex-direction: column-reverse;
+      }
+
+      .explore-image img {
+        margin-top: 20px;
+      }
+
+       @media (max-width: 640px) {
+        .explore-image img {
+        max-width: 100%;
+        height: auto;
+    }
+       }
+
+    }
+  /*============ END DEMO ============*/
+
+
+  /*============ START CARACTERISTICAS ============*/
+    .caracteristicas-main {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      color: white;
+    }
+
+    .grid-cursos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .tarjeta {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .tarjeta:hover {
+      transform: scale(1.03);
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: #fff;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: justify;
+      padding: 20px;
+      transition: opacity 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .tarjeta:hover .overlay {
+      opacity: 1;
+    }
+  /*============ END CARACTERISTICAS ============*/
 
 
   /*============= FAQS =============*/
-  .fqs {
-    margin-top: 80px;
-  }
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #26bfd3;
+    }
 
-  .main-since {
-    background-color: #000000;
-    color: white;
-    font-family: sans-serif;
-    padding: 20px;
+   .body-quest{
+    background: #ffffff;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+   }
 
-  }
+   .faq-section {
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
- .faq-section h2 {
-    text-align: center;
-    color: #10d0f2;
-    padding: 15px;
-  }
+/* h2 {
+  text-align: center;
+  color: #007BFF;
+  margin-bottom: 2rem;
+} */
 
-  .faq-section {
-    max-width: 400px;
-    margin: auto;
-  }
+/* Cada item de la FAQ como tarjeta */
+.faq-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
 
-  .faq-title {
-    color: #00abf0;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+.faq-item.open {
+  box-shadow: 0 6px 12px rgba(0, 170, 255, 0.2);
+}
 
-  .faq-item {
-    background-color: #1c1c1c;
-    border-radius: 8px;
-    margin: 10px 0;
-    padding: 15px;
-    cursor: pointer;
-    position: relative;
-  }
+/* Botón de la pregunta */
+.faq-question {
+  width: 100%;
+  padding: 1.25rem;
+  background-color: #ffffff;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #4e535a;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 12px;
+}
 
-  .faq-item:hover {
-    background-color: #2a2a2a;
-  }
+.faq-question:hover {
+  background-color: #f0f8ff;
+}
 
-  .faq-item::after {
-    content: '+';
-    position: absolute;
-    right: 20px;
-    font-size: 20px;
-  }
+/* Flecha en círculo */
+.arrow-circle {
+  width: 35px;
+  height: 35px;
+  background-color: #e0f0ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
 
-  .faq-answer {
-    display: none;
-    margin-top: 10px;
-    color: #ccc;
-  }
+.arrow {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #00aaff;
+}
 
-  .active .faq-answer {
-    display: block;
-  }
+/* Estilo de la respuesta */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  color: #333;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
 
-  .active::after {
-    content: '-';
-  }
+/* Cuando está abierta */
+.faq-item.open .faq-question {
+  color: #00aaff;
+}
+
+.faq-item.open .arrow {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+.faq-item.open .arrow-circle {
+  background-color: #00aaff;
+}
+
+.faq-item.open .faq-answer {
+  padding: 1rem 1.25rem 1.25rem;
+  max-height: 500px; /* valor suficiente para que quepa el texto */
+}
   /*============= END FAQS =========*/
 
 
@@ -271,7 +436,7 @@
   footer.contact {
     padding: 30px;
     text-align: center;
-    background-color: #010202;
+    background-color: #ffffff;
     color: #ffffff;
   }
 
@@ -288,26 +453,77 @@
       text-align: center;
     }
 
+    .home-descript{
+      width: 100%;
+      padding: 30px;
+      text-align: justify;
+    }
+
     .home-img {
-      display: none;
+      width: 100%;
+      justify-content: center;
+      margin: 10px;
     }
 
     .menu-toggle {
       display: block;
+      font-size: 30px;
+    color: var(--text);
+    cursor: pointer;
     }
 
-    .container-navegation {
+    .close {
+      display: block;
+      font-size: 30px;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    /* .container-navegation {
       display: none;
       position: absolute;
       top: 70px;
       right: 0;
-      background-color: var(--black);
+      background-color: var(--white);
       width: 100%;
       z-index: 99;
-    }
+    } */
+     .container-navegation{
+      display: none;
+      position: fixed;
+      top: 110px;
+      left: 0;
+      width: 100%;
+      /* width: 100vw;
+      height: 100vh; */
+      background: white;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+      transition: opacity 0.3s ease;
+     }
 
-    .container-navegation.active {
-      display: block;
+     .nav-menu .close{
+      position: absolute;
+      top: 1rem;
+      right: 3rem;
+     }
+
+
+    /*Icono X al desplegar hamburguesa*/
+    .container-navegation {
+      cursor: pointer;
+    }
+    /*Icono X al desplegar hamburguesa*/
+
+    /* .container-navegation.active {
+      /* display: block; */
+      /* display: flex;
+    } */
+
+    .container-navegation.active{
+      display: flex;
     }
 
     .container-navegation ul {
@@ -335,6 +551,22 @@
       max-width: 100%;
     }
     /*============ END INFO ============*/
+
+
+    /*============ MAIN HOME ============*/
+    .info-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .info-content.reverse {
+      flex-direction: column;
+    }
+
+    .info-img, .info-text {
+      max-width: 100%;
+    }
+    /*============ MAIN HOME ============*/
   }
 
 
@@ -380,6 +612,7 @@
     margin-bottom: 0;
     color: var(--text);
   }
+
   @media (max-width: 640px) {
     /*Start Menú*/
     .menu {
@@ -404,3 +637,15 @@
     }
 
   }
+
+  /* Esconde el ícono de hamburguesa en pantallas grandes */
+
+
+.hidden {
+  display: none !important;
+}
+
+.container-navegation a:target {
+  color: var(--title); /* o el color activo que quieras */
+  font-weight: bold;
+}

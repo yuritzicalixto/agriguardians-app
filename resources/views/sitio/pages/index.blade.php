@@ -28,96 +28,161 @@
       </div>
 
       <div class="home-img" >
-        <img src="{{ asset ('assets/img/macehual.png')}}" alt="Macehual" />
+        <img src="{{ asset ('assets/img/tlaloc.png')}}" alt="tlaloc" />
+        <img src="{{ asset ('assets/img/guerrero.png')}}" alt="guerrero" />
+        <img src="{{ asset ('assets/img/diosa.png')}}" alt="diosa" />
       </div>
     </section>
 
-
-    <section class="info-section"  id="agriguardians">
-        <div class="info-content">
-          <div class="info-img">
-            <img src="{{ asset ('assets/img/background.jpeg')}}" alt="Descripción de la imagen" />
-          </div>
-          <div class="info-text">
-            <h2>"Descubre el poder de la agricultura ancestral con tecnología moderna."</h2>
-            <ul>
-              <li>Regístrate ahora y únete a la revolución agrícola.</li>
-              <li>Únete a una comunidad educativa y divertida.</li>
-              <li>Descarga la demo y empieza tu aventura.</li>
-            </ul>
-            <a href="#" class="btn-download">Descargar Ahora</a>
-          </div>
+    <!-- DESCARGAR DEMO -->
+     <section class="demo-main" id="agriguardians">
+      <div class="explore-card">
+        <div class="explore-image">
+          <img src="{{ asset ('assets/img/puma.png')}}" alt="Puma">
         </div>
-      </section>
-
-      <div class="home-descript agri" >
-        <h3>Características Principales</h3>
+        <div class="explore-text">
+          <h2>Descubre el poder de la agricultura ancestral con tecnología moderna.</h2>
+          <p>¡No te quedes fuera de la revolución agrícola! Regístrate hoy y forma parte de una comunidad educativa y divertida que está cambiando el futuro. Descarga la demo y comienza tu aventura ahora mismo.</p>
+          <button class="explore-button">Demo</button>
+        </div>
       </div>
-      <section class="main-container" id="caracteristicas">
-        <div class="cards-container">
-          <div class="product-card">
-            <img src="{{ asset ('assets/img/1-8.png')}}" alt="">
-            <div class="product-info">
-              <div>
-                <p>Aprendizaje Interactivo</p>
-                <p>Explora entornos prehispánicos en estilo low poly, interactúa con dioses antiguos y aprende sobre prácticas agrícolas sostenibles</p>
-              </div>
-            </div>
-          </div>
+    </section>
 
-          <div class="product-card">
-            <img src="{{ asset ('assets/img/2-8.png')}}" alt="">
-            <div class="product-info">
-              <div>
-                <p>Exploración</p>
-                <p>Sumérgete en tres zonas representativas de México: Zona Árida, Zona Húmeda y Zona Semi Húmeda</p>
-              </div>
-            </div>
-          </div>
+<!-- CARACTERISTICAS -->
+      <section class="caracteristicas-main" id="caracteristicas">
+        <h2>Características Principales</h2>
+    <div class="grid-cursos">
+    <div class="tarjeta">
+      <img src="{{ asset ('assets/img/agri-1.jpeg')}}" alt="Curso CSS">
+      <div class="overlay text">
+        <p>Explora entornos prehispánicos en estilo low poly, interactúa con dioses antiguos y aprende sobre prácticas agrícolas sostenibles.</p>
+      </div>
+    </div>
 
-          <div class="product-card">
-            <img src="{{ asset ('assets/img/3-8.png')}}" alt="">
-            <div class="product-info">
-              <div>
-                <p>Recolección de Datos</p>
-                <p>Tus decisiones y progresos ayudan a nutrir una base de datos colectiva para comprender cómo aprenden los jóvenes sobre sostenibilidad y qué prácticas les resultan más útiles.</p>
-              </div>
-            </div>
-          </div>
+    <div class="tarjeta">
+      <img src="{{ asset ('assets/img/agri-2.jpeg')}}" alt="Curso HTML">
+      <div class="overlay">
+        <p>Cada nivel está guiado por un dios/diosa mesoamericano (ej. Tlaloc, Xochipilli, Tezcatlipoca), reforzando el contexto cultural y el aprendizaje ecológico.</p>
+      </div>
+    </div>
 
-          <div class="product-card">
-            <img src="{{ asset ('assets/img/4-8.png')}}" alt="">
-            <div class="product-info">
-              <div>
-                <p>Progresión narrativa</p>
-                <p>Cada nivel está guiado por un dios/diosa mesoamericano (ej. Tlaloc, Xochipilli, Tezcatlipoca), reforzando el contexto cultural y el aprendizaje ecológico.</p>
-              </div>
-            </div>
-          </div>
+    <div class="tarjeta">
+      <img src="{{ asset ('assets/img/agri-3.jpeg')}}" alt="Curso GSAP">
+      <div class="overlay">
+        <p>Sumérgete en tres zonas representativas de México: Zona Árida, Zona Húmeda y Zona Semi Húmeda.</p>
+      </div>
+    </div>
 
-          <div class="product-card">
-            <img src="{{ asset ('assets/img/5-8.png')}}" alt="">
-            <div class="product-info">
-              <div>
-                <p>Sistema de logros</p>
-                <p>El jugador gana herramientas, consejos y objetos para mejorar su huerto a medida que supera desafíos agrícolas en el juego.</p>
-              </div>
-            </div>
-          </div>
+    <div class="tarjeta">
+      <img src="{{ asset ('assets/img/agri-4.jpeg')}}" alt="Curso Tailwind">
+      <div class="overlay">
+        <p>Fomenta habilidades en ciencia, tecnología, ecología y cultura ancestral de manera interactiva y motivadora.</p>
+      </div>
+    </div>
+  </div>
+  </section>
 
-          <div class="product-card">
-            <img src="{{ asset ('assets/img/6-8.png')}}" alt="">
-            <div class="product-info">
-              <div>
-                <p>Enfoque STEAM</p>
-                <p>Fomenta habilidades en ciencia, tecnología, ecología y cultura ancestral de manera interactiva y motivadora.</p>
-              </div>
-            </div>
-          </div>
+    <!-- PREGUNTAS FRECUENTES -->
+  <section class="body-quest" id="faqs">
+    <section class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+<!-- START Q1 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Qué es AgriGuardians?
+        <div class="arrow-circle">
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-      </section>
+      </button>
+      <div class="faq-answer">
+        Es un videojuego educativo interactivo que enseña técnicas de agricultura sostenible a través de una experiencia gamificada inspirada en culturas prehispánicas.
+      </div>
+    </div>
+<!-- END Q1 -->
 
+<!-- START Q2 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Qué edades pueden jugar AgriGuardians?
+        <div class="arrow-circle">
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        Está diseñado principalmente para jóvenes de entre 12 y 21 años, aunque cualquier persona interesada puede jugarlo.
+      </div>
+    </div>
+<!-- END Q2 -->
 
+<!-- START Q3 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Necesito conocimientos previos en agricultura?
+        <div class="arrow-circle">
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        No, el juego está diseñado para enseñarte desde lo más básico hasta técnicas más avanzadas según tu nivel.
+      </div>
+    </div>
+<!-- END Q3 -->
+
+<!-- START Q4 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Qué son las zonas Árida, Húmeda y Semi-Húmeda?
+        <div class="arrow-circle">
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        Representan distintos entornos climáticos donde aprenderás técnicas agrícolas específicas adaptadas a cada uno.
+      </div>
+    </div>
+<!-- END Q4 -->
+
+<!-- START Q5 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Qué papel juegan los dioses prehispánicos en el juego?
+        <div class="arrow-circle">
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        Actúan como guías temáticos que enseñan valores ecológicos y prácticas agrícolas ancestrales según la zona.
+      </div>
+    </div>
+<!-- END Q5 -->
+
+<!-- START Q6 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿El juego tiene un enfoque educativo real?
+        <div class="arrow-circle">
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </button>
+      <div class="faq-answer">
+        Sí, el contenido está basado en investigaciones sobre agricultura prehispánica y adaptado al contexto actual.
+      </div>
+    </div>
+<!-- END Q6 -->
+  </section>
+  </section>
 
 
 @endsection

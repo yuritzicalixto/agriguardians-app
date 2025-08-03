@@ -1,24 +1,36 @@
-// const toggle = document.getElementById('menu-toggle');
-//     const navLinks = document.getElementById('nav-links');
-  
-//     toggle.addEventListener('click', () => {
-//       navLinks.classList.toggle('active');
-//     });
+const menuToggle = document.getElementById('menu-toggle');
+const closeMenu = document.getElementById('closeMenu');
+const navLinks = document.getElementById('nav-links');
 
-    
-    
-document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-  
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.add('active');
+  menuToggle.classList.add('hidden');
+  closeMenu.classList.remove('hidden');
+});
+
+closeMenu.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+  closeMenu.classList.add('hidden');
+  menuToggle.classList.remove('hidden');
+});
+
+document.querySelectorAll('.container-navegation a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    closeMenu.classList.add('hidden');
+    menuToggle.classList.remove('hidden');
   });
-
+});
 
 
 // Preguntas Frecuentes
-function toggleFAQ(element) {
-    element.classList.toggle('active');
-  }
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(button => {
+  button.addEventListener('click', () => {
+    const faqItem = button.parentElement;
+    faqItem.classList.toggle('open');
+  });
+});
+
+

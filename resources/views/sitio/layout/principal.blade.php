@@ -11,11 +11,11 @@
   <main class="main-principal">
     @yield('contenido')
   </main>
-<br>
+{{-- <br>
 <br>
   <footer class="contact">
 @include('sitio.includes.footer')
-  </footer>
+  </footer> --}}
   <!--MENU-->
     @include('sitio.includes.scripts')
 
